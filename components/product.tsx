@@ -8,7 +8,7 @@ const products = [
     tagline: "For a Healthy Skin",
     description: "For a smooth, clear and healthy skin. Made with Mineral Oil, Micro Wax, Beeswax, Lavender, Argan Oil & Essential Oils.",
     sizes: ["25g", "60g", "120g", "200g"],
-    image: "/images/herbal-jelly-closeup.jpg",
+    image: "/images/jelly.jpeg",
     color: "bg-primary",
   },
   {
@@ -16,7 +16,7 @@ const products = [
     tagline: "Perfumed Herbal Petroleum Jelly",
     description: "For a smooth, clear and healthy skin. Made with Mineral Oil, Micro Wax, Vitamin E & Perfume. Gentle enough for baby's delicate skin.",
     sizes: ["25g", "60g", "120g", "200g"],
-    image: "/images/baby-jelly-purple.jpg",
+    image: "/images/newone.png",
     color: "bg-accent",
   },
 ]
@@ -31,6 +31,8 @@ export function Product() {
   return (
     <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
+        
+        {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-primary">
             Our Products
@@ -51,7 +53,7 @@ export function Product() {
               alt="Frankline's complete product range - Herbal Petroleum Jelly and Baby Jelly labels"
               width={800}
               height={600}
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain bg-white p-4"
             />
           </div>
         </div>
@@ -63,14 +65,15 @@ export function Product() {
               key={product.name}
               className="flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-sm"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
                 <Image
                   src={product.image}
                   alt={`Frankline's ${product.name}`}
                   fill
-                  className="object-cover"
+                  className="object-contain p-4 rounded-lg"
                 />
               </div>
+
               <div className="flex flex-col gap-4 p-8">
                 <div>
                   <h3 className="font-serif text-2xl text-card-foreground">
@@ -78,7 +81,11 @@ export function Product() {
                   </h3>
                   <p className="mt-1 text-sm font-medium text-primary">{product.tagline}</p>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">{product.description}</p>
+
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {product.description}
+                </p>
+
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     Available Sizes
@@ -94,6 +101,7 @@ export function Product() {
                     ))}
                   </div>
                 </div>
+
                 <Button size="lg" className="mt-2 gap-2" asChild>
                   <a
                     href="https://wa.me/256702222739"
@@ -124,26 +132,30 @@ export function Product() {
           </ol>
         </div>
 
-        {/* Bulk / Packaging */}
+        {/* Bulk / Packaging Images */}
         <div className="mt-20 grid gap-8 md:grid-cols-2">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border">
+          
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-white">
             <Image
-              src="/images/bulk-products.jpg"
+              src="/images/image3.png"
               alt="Frankline's products in bulk packaging"
               fill
-              className="object-cover"
+              className="object-contain p-4"
             />
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border h-full">
+
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-white">
             <Image
-              src="/images/image2.png"
+              src="/images/jelly2-romoved.png"
               alt="Frankline's product packaging and label details"
               fill
-              className="object-cover"
+              className="object-contain p-4"
             />
           </div>
+
         </div>
 
+        {/* wholesale contact */}
         <div className="mt-8 text-center">
           <p className="text-sm text-muted-foreground">
             Wholesale and bulk orders available. Contact us for pricing.
