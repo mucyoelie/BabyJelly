@@ -1,4 +1,4 @@
-import { Reviews } from "@/components/reviews"
+import Reviews from "@/components/reviews"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {

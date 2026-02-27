@@ -47,7 +47,7 @@ export function Product() {
         <div className="mt-12 flex justify-center">
           <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-border bg-card shadow-lg">
             <Image
-              src="/images/product-labels.jpg"
+              src="/images/image3.png"
               alt="Frankline's complete product range - Herbal Petroleum Jelly and Baby Jelly labels"
               width={800}
               height={600}
@@ -134,9 +134,9 @@ export function Product() {
               className="object-cover"
             />
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border h-full">
             <Image
-              src="/images/packaging-labels.jpg"
+              src="/images/image2.png"
               alt="Frankline's product packaging and label details"
               fill
               className="object-cover"

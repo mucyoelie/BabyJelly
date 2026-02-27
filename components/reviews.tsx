@@ -1,4 +1,6 @@
-import { Star } from "lucide-react"
+"use client";
+
+import { Star } from "lucide-react";
 
 const reviews = [
   {
@@ -31,7 +33,7 @@ const reviews = [
     text: "Perfect for my newborn baby. The baby jelly is so gentle and smells lovely. Thank you Frankline's!",
     rating: 5,
   },
-]
+];
 
 function Stars({ count }: { count: number }) {
   return (
@@ -39,43 +41,102 @@ function Stars({ count }: { count: number }) {
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className={`h-4 w-4 ${
-            i < count ? "fill-accent text-accent" : "text-border"
-          }`}
+          className={`h-4 w-4 ${i < count ? "fill-accent text-accent" : "text-border"}`}
         />
       ))}
     </div>
-  )
+  );
 }
 
-export function Reviews() {
+export default function ReviewsSection() {
   return (
-    <section className="bg-secondary py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Testimonials
-          </span>
-          <h2 className="mt-3 font-serif text-3xl text-foreground md:text-4xl text-balance">
-            What Our Customers Say
-          </h2>
-        </div>
+    <>
+      {/* REVIEWS SECTION */}
+      <section className="bg-secondary py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-primary">
+              Testimonials
+            </span>
+            <h2 className="mt-3 font-serif text-3xl md:text-4xl text-foreground text-balance">
+              What Our Customers Say
+            </h2>
+          </div>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((review) => (
-            <div
-              key={review.name}
-              className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-8"
-            >
-              <Stars count={review.rating} />
-              <blockquote className="flex-1 text-base leading-relaxed text-card-foreground">
-                &ldquo;{review.text}&rdquo;
-              </blockquote>
-              <p className="text-sm font-semibold text-muted-foreground">&mdash; {review.name}</p>
-            </div>
-          ))}
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {reviews.map((review) => (
+              <div
+                key={review.name}
+                className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-8"
+              >
+                <Stars count={review.rating} />
+                <blockquote className="flex-1 text-base leading-relaxed text-card-foreground">
+                  &ldquo;{review.text}&rdquo;
+                </blockquote>
+                <p className="text-sm font-semibold text-muted-foreground">
+                  &mdash; {review.name}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+
+      {/* BEFORE & AFTER SECTION */}
+      <section className="bg-secondary py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Heading */}
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <span className="text-sm font-semibold uppercase tracking-widest text-primary">
+              Results
+            </span>
+            <h2 className="mt-3 font-serif text-3xl md:text-4xl text-foreground text-balance">
+              Before & After Using Baby Jelly
+            </h2>
+            <p className="mt-4 text-muted-foreground text-base">
+              Frankline's Baby Jelly is specially made for sensitive skin — keeping
+              it moisturized, soft, and protected from dryness and irritation.
+            </p>
+          </div>
+
+          {/* Images */}
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Before */}
+            <div className="rounded-2xl overflow-hidden shadow border border-border">
+              <img
+                src="/images/beforeagain.png"
+                alt="African baby before using jelly"
+                className="w-full h-auto max-h-[400px] object-contain bg-gray-100"
+              />
+              <p className="text-center py-3 text-sm font-semibold text-muted-foreground">
+                Before – Dry Skin
+              </p>
+            </div>
+
+            {/* After */}
+            <div className="rounded-2xl overflow-hidden shadow border border-border">
+              <img
+                src="/images/afteragain.png"
+                alt="African baby after using jelly"
+                className="w-full h-auto max-h-[400px] object-contain bg-gray-100"
+              />
+              <p className="text-center py-3 text-sm font-semibold text-muted-foreground">
+                After – Soft & Moisturized Skin
+              </p>
+            </div>
+          </div>
+
+          {/* Explanation */}
+          <div className="mx-auto max-w-3xl mt-14 text-center">
+            <p className="text-base leading-relaxed text-card-foreground">
+              Made with natural moisturizing ingredients, Frankline's Baby Jelly
+              protects your child's skin from harsh weather and dryness. Safe for
+              newborns, toddlers, and adults. Keeps the skin smooth, protected, and
+              glowing.
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
