@@ -14,17 +14,16 @@ export function About() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
 
-          {/* IMAGE SECTION (Improved & fixed) */}
-         {/* IMAGE SECTION (Full image visible & clean) */}
-<div className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-md flex items-center justify-center p-4">
-  <Image
-    src="/images/image3.png"
-    alt="Frankline's product manufactured by Wisdom Creations - SMC Limited"
-    fill
-    priority
-    className="object-contain rounded-2xl"
-  />
-</div>
+          {/* IMAGE SECTION (Perfect fit) */}
+          <div className="relative w-full aspect-[4/3] overflow-hidden rounded-3xl shadow-md">
+            <Image
+              src="/images/product5.jpeg"
+              alt="Frankline's product manufactured by Wisdom Creations - SMC Limited"
+              fill
+              priority
+              className="object-cover object-center rounded-3xl"
+            />
+          </div>
 
           {/* TEXT SECTION */}
           <div className="flex flex-col gap-6">
@@ -67,8 +66,8 @@ export function About() {
                 ))}
               </ul>
             </div>
-
           </div>
+
         </div>
       </div>
     </section>

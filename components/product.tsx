@@ -16,7 +16,7 @@ const products = [
     tagline: "Perfumed Herbal Petroleum Jelly",
     description: "For a smooth, clear and healthy skin. Made with Mineral Oil, Micro Wax, Vitamin E & Perfume. Gentle enough for baby's delicate skin.",
     sizes: ["25g", "60g", "120g", "200g"],
-    image: "/images/newone.png",
+    image: "/images/product4.jpeg",
     color: "bg-accent",
   },
 ]
@@ -49,7 +49,7 @@ export function Product() {
         <div className="mt-12 flex justify-center">
           <div className="relative w-full max-w-3xl overflow-hidden rounded-3xl border border-border bg-card shadow-lg">
             <Image
-              src="/images/image3.png"
+              src="/images/product3.jpeg"
               alt="Frankline's complete product range - Herbal Petroleum Jelly and Baby Jelly labels"
               width={800}
               height={600}
@@ -137,7 +137,7 @@ export function Product() {
           
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-white">
             <Image
-              src="/images/image3.png"
+              src="/images/product2.jpeg"
               alt="Frankline's products in bulk packaging"
               fill
               className="object-contain p-4"
@@ -146,7 +146,7 @@ export function Product() {
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-white">
             <Image
-              src="/images/jelly2-romoved.png"
+              src="/images/product1.jpeg"
               alt="Frankline's product packaging and label details"
               fill
               className="object-contain p-4"

@@ -204,7 +204,7 @@ export function Hero() {
             <div className="rounded-3xl border border-border shadow bg-card overflow-hidden">
            <div className="relative w-full aspect-square bg-white rounded-lg overflow-hidden">
   <Image
-    src="/images/newbrand.png"
+    src="/images/product1.jpeg"
     alt="Frankline's Baby Jelly"
     fill
     className="object-contain p-6 rounded-lg"
